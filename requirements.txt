@@ -5,5 +5,4 @@ matplotlib
 pandas
 tensorflow-cpu
 sklearn
-os
 gunicorn
