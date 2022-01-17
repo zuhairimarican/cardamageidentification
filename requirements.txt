@@ -4,4 +4,5 @@ matplotlib
 pandas
 tensorflow-cpu
 scikit-learn
+skimage
 gunicorn
