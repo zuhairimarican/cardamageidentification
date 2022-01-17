@@ -13,9 +13,9 @@ import tensorflow as tf
 import numpy as np 
 
 print("Loading model") 
-global sess
-sess = tf.compat.v1.Session()
-set_session(sess)
+#global sess
+#sess = tf.compat.v1.Session()
+#set_session(sess)
 global model 
 model = load_model('my_cifar10_model.h5') 
 global graph
@@ -39,7 +39,7 @@ def prediction(filename):
     
     #Step 3
     with graph.as_default():
-      set_session(sess)
+      #set_session(sess)
       probabilities = model.predict(np.array( [my_image_re,] ))[0,:]
       print(probabilities)
       #Step 4
