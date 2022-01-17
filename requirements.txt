@@ -1,8 +1,7 @@
 numpy
 Flask
-pickleshare
 matplotlib
 pandas
 tensorflow-cpu
-sklearn
+scikit-learn
 gunicorn
