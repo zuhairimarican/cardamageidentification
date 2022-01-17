@@ -38,7 +38,7 @@ def prediction(filename):
     my_image_re = resize(my_image, (32,32,3))
     
     #Step 3
-    with graph.as_default():
+    #with graph.as_default():
       #set_session(sess)
       #Add
       model.run_eagerly=True  
@@ -55,7 +55,7 @@ def prediction(filename):
         "prob1":probabilities[index[9]],
         "prob2":probabilities[index[8]],
         "prob3":probabilities[index[7]],
-      }
+      #}
     #Step 5
     return render_template('predict.html', predictions=predictions)
 
