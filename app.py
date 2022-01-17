@@ -41,21 +41,21 @@ def prediction(filename):
     #with graph.as_default():
       #set_session(sess)
       #Add
-      model.run_eagerly=True  
-      probabilities = model.predict(np.array( [my_image_re,] ))[0,:]
-      print(probabilities)
-      #Step 4
-      number_to_class = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 
+    model.run_eagerly=True  
+    probabilities = model.predict(np.array( [my_image_re,] ))[0,:]
+    print(probabilities)
+    #Step 4
+    number_to_class = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 
 'truck']
-      index = np.argsort(probabilities)
-      predictions = {
-        "class1":number_to_class[index[9]],
-        "class2":number_to_class[index[8]],
-        "class3":number_to_class[index[7]],
-        "prob1":probabilities[index[9]],
-        "prob2":probabilities[index[8]],
-        "prob3":probabilities[index[7]],
-      #}
+    index = np.argsort(probabilities)
+    predictions = {
+      "class1":number_to_class[index[9]],
+      "class2":number_to_class[index[8]],
+      "class3":number_to_class[index[7]],
+      "prob1":probabilities[index[9]],
+      "prob2":probabilities[index[8]],
+      "prob3":probabilities[index[7]],
+     #}
     #Step 5
     return render_template('predict.html', predictions=predictions)
 
