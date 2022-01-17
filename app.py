@@ -41,7 +41,7 @@ def prediction(filename):
     with graph.as_default():
       #set_session(sess)
       #Add
-      #mode.run_eargerly=True  
+      model.run_eagerly=True  
       probabilities = model.predict(np.array( [my_image_re,] ))[0,:]
       print(probabilities)
       #Step 4
