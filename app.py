@@ -55,7 +55,7 @@ def prediction(filename):
       "prob1":probabilities[index[9]],
       "prob2":probabilities[index[8]],
       "prob3":probabilities[index[7]],
-     #}
+     }
     #Step 5
     return render_template('predict.html', predictions=predictions)
 
