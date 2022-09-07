@@ -16,7 +16,7 @@ print("Loading model")
 #sess = tf.compat.v1.Session()
 #set_session(sess)
 global model 
-model = load_model('carnormaldamageRGBWorking.h5') 
+model = load_model('CarsRGBWorking.h5') 
 #global graph
 #graph = tf.compat.v1.get_default_graph()
 
